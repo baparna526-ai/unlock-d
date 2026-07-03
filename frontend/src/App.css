@@ -123,3 +123,156 @@ button {
   min-height: 100vh;
   padding: 40px;
 }
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 20px;
+}
+
+.login-card {
+  background: #111;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;   /* ⭐ important spacing */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-card h1 {
+  color: #8bc34a;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.4; /* fixes overlap feeling */
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #8bc34a;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+.dashboard-container {
+  min-height: 100vh;
+  background: black;
+  color: white;
+}
+
+/* Top bar */
+.dashboard-header {
+  padding: 15px 25px;
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h2 {
+  color: #8bc34a;
+  margin: 0;
+}
+
+/* Small welcome text */
+.welcome-text {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Main content */
+.dashboard-content {
+  padding: 30px;
+}
+
+.info-text {
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Logout button */
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #8bc34a;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.dashboard-container {
+  min-height: 100vh;
+  background: black;
+  color: white;
+}
+
+/* top bar */
+.dashboard-header {
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.dashboard-header h2 {
+  color: #8bc34a;
+  margin: 0;
+}
+
+/* logout */
+.logout-btn {
+  background: #8bc34a;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* main content */
+.dashboard-content {
+  padding: 40px;
+}
+
+/* BIG welcome text */
+.welcome-title {
+  font-size: 28px;
+  color: #8bc34a;
+  margin-bottom: 10px;
+}
+
+/* small greeting */
+.welcome-subtext {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* description */
+.info-text {
+  font-size: 14px;
+  color: #aaa;
+}
