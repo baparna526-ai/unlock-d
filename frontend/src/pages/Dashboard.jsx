@@ -80,36 +80,92 @@ function Dashboard() {
   }
 
   // 🔓 DASHBOARD SCREEN
-  return (
-    <div className="dashboard-container">
+return (
+  <div className="dashboard-container">
 
-      {/* HEADER */}
-      <div className="dashboard-header">
-        <h2>🏦 Secure Bank</h2>
-        <button onClick={handleLogout} className="logout-btn">
-          Logout
-        </button>
+    {/* Top Header */}
+    <div className="dashboard-header">
+      <div>
+        <h1 className="dashboard-greeting">
+          Good Evening, {user.name} 👋
+        </h1>
+        <p className="dashboard-subtitle">
+          Welcome back to Secure Bank. Here's your financial overview.
+        </p>
       </div>
 
-      {/* CONTENT */}
-      <div className="dashboard-content">
+      <button onClick={handleLogout} className="logout-btn">
+        Logout
+      </button>
+    </div>
 
-        <h1 className="welcome-title">
-          Welcome to Secure Bank
-        </h1>
+    {/* Summary Cards */}
+    <div className="summary-grid">
 
-        <p className="welcome-subtext">
-          Welcome, {user.name} 👋
-        </p>
+      <div className="summary-card">
+        <h3>💳 Current Balance</h3>
+        <h2>₹15,000</h2>
+        <span>Available Balance</span>
+      </div>
 
-        <p className="info-text">
-          Manage your accounts, transfer money, and view history securely.
-        </p>
+      <div className="summary-card">
+        <h3>📤 Transfers</h3>
+        <h2>12</h2>
+        <span>This Month</span>
+      </div>
 
+      <div className="summary-card">
+        <h3>🎯 Budget</h3>
+        <h2>65%</h2>
+        <span>Remaining</span>
+      </div>
+
+      <div className="summary-card">
+        <h3>👥 Groups</h3>
+        <h2>3</h2>
+        <span>Active Groups</span>
       </div>
 
     </div>
-  );
-}
 
+    {/* Quick Actions */}
+    <div className="quick-actions">
+
+      <h2>⚡ Quick Actions</h2>
+
+      <div className="action-buttons">
+        <button>Transfer</button>
+        <button>Accounts</button>
+        <button>Budget</button>
+        <button>Groups</button>
+      </div>
+
+    </div>
+
+    {/* Recent Transactions */}
+    <div className="recent-card">
+
+      <h2>🕒 Recent Transactions</h2>
+
+      <div className="transaction-row">
+        <span>Rahul</span>
+        <span>₹500</span>
+      </div>
+
+      <div className="transaction-row">
+        <span>Priya</span>
+        <span>₹1200</span>
+      </div>
+
+      <div className="transaction-row">
+        <span>Aman</span>
+        <span>₹850</span>
+      </div>
+
+    </div>
+
+  </div>
+);
+}
+ 
 export default Dashboard;

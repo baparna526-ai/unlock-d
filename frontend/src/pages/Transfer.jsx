@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AccountContext } from "../context/AccountContext";
 import "../App.css";
 
 function Transfer() {
-  const balance = 15000;
+  const {
+  accounts,
+  setAccounts,
+  transactions,
+  setTransactions,
+} = useContext(AccountContext);
+  const savingsAccount = accounts.find(
+    (account) => account.name === "Savings"
+  );
 
-  const [from] = useState("Savings Account");
+  const balance = savingsAccount.balance;
+
+  const [from] = useState("Savings");
   const [to, setTo] = useState("Rahul");
   const [amount, setAmount] = useState("");
   const [remarks, setRemarks] = useState("");
@@ -32,7 +43,34 @@ function Transfer() {
     setProcessing(true);
 
     setTimeout(() => {
+      const updatedAccounts = accounts.map((account) => {
+        if (account.name === "Savings") {
+          return {
+            ...account,
+            balance: account.balance - Number(amount),
+          };
+        }
+
+        return account;
+      });
+
+      setAccounts(updatedAccounts);
+      const newTransaction = {
+  id: Date.now(),
+  from,
+  to,
+  amount: Number(amount),
+  remarks,
+  status: "Success",
+  date: new Date().toLocaleString(),
+};
+
+setTransactions([...transactions, newTransaction]);
+
       alert("Transfer Successful!");
+
+      setAmount("");
+      setRemarks("");
       setProcessing(false);
     }, 2000);
   };
@@ -43,11 +81,11 @@ function Transfer() {
         <h1>Transfer Money</h1>
 
         <h3>Available Balance</h3>
-        <p className="balance">₹ {balance}</p>
+        <p className="balance">₹{balance}</p>
 
         <label>Transfer From</label>
-        <select value={from}>
-          <option>Savings Account</option>
+        <select value={from} disabled>
+          <option>Savings</option>
         </select>
 
         <label>Transfer To</label>
@@ -68,7 +106,7 @@ function Transfer() {
         <label>Remarks</label>
         <input
           type="text"
-          placeholder="Birthday Gift"
+          placeholder="Enter your remarks(optional)"
           value={remarks}
           onChange={(e) => setRemarks(e.target.value)}
         />

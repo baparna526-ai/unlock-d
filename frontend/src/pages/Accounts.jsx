@@ -1,30 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AccountContext } from "../context/AccountContext";
 import "../App.css";
-
-function Accounts() {
-  const accounts = [
-    {
-      id: 1,
-      name: "Savings",
-      balance: 15000,
-      icon: "🏦",
-    },
-    {
-      id: 2,
-      name: "Checking",
-      balance: 8500,
-      icon: "💳",
-    },
-    {
-      id: 3,
-      name: "Business",
-      balance: 45000,
-      icon: "🏢",
-    },
-  ];
+  function Accounts() {
+  const { accounts } = useContext(AccountContext);
 
   const [selectedAccount, setSelectedAccount] = useState(accounts[0]);
-
   return (
     <div className="accounts-container">
       <h1>My Accounts</h1>
