@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+.transfer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.transfer-card {
+  width: 400px;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.balance {
+  color: #8bc34a;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #8bc34a;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.accounts-container {
+  background: black;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.accounts-container h1 {
+  color: #8bc34a;
+  text-align: center;
+}
+
+.account-card {
+  background: #1b1b1b;
+  color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 420px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.account-card:hover {
+  border-color: #8bc34a;
+  transform: translateY(-3px);
+}
+
+.account-card h2 {
+  color: #8bc34a;
+}
+
+.selected-account {
+  margin: 40px auto;
+  width: 420px;
+  background: #111;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.selected-account h1 {
+  color: #8bc34a;
+}
+
+.navbar {
+  background: #111;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #8bc34a;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #8bc34a;
+}
+
+.page {
+  background: black;
+  color: white;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 20px;
+}
+
+.login-card {
+  background: #111;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;   /* ⭐ important spacing */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-card h1 {
+  color: #8bc34a;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.4; /* fixes overlap feeling */
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #8bc34a;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+.dashboard-container {
+  min-height: 100vh;
+  background: black;
+  color: white;
+}
+
+/* Top bar */
+.dashboard-header {
+  padding: 15px 25px;
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h2 {
+  color: #8bc34a;
+  margin: 0;
+}
+
+/* Small welcome text */
+.welcome-text {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Main content */
+.dashboard-content {
+  padding: 30px;
+}
+
+.info-text {
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Logout button */
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #8bc34a;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.dashboard-container {
+  min-height: 100vh;
+  background: black;
+  color: white;
+}
+
+/* top bar */
+.dashboard-header {
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.dashboard-header h2 {
+  color: #8bc34a;
+  margin: 0;
+}
+
+/* logout */
+.logout-btn {
+  background: #8bc34a;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* main content */
+.dashboard-content {
+  padding: 40px;
+}
+
+/* BIG welcome text */
+.welcome-title {
+  font-size: 28px;
+  color: #8bc34a;
+  margin-bottom: 10px;
+}
+
+/* small greeting */
+.welcome-subtext {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* description */
+.info-text {
+  font-size: 14px;
+  color: #aaa;
+}
